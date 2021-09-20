@@ -27,6 +27,8 @@ public class Produto {
         
     }
     
+    public Produto(){}
+
     //Métodos Get e Set para poder modificar as variáveis.
     public String getNome() {
         return nome;
@@ -60,6 +62,9 @@ public class Produto {
         this.comprimento = comprimento;
     }
 
+
+
+    // método para calcular a caixa apropriada para o produto.
      public String calcularCaixaApropriada(){
         
         if(altura <= 30 && largura <= 40 && comprimento <= 80){
@@ -76,9 +81,11 @@ public class Produto {
         } 
         
     }
-     
-     public void imprimirResultado(){
-         
-     }
+
+    public String imprimeProduto(){
+
+        return "NOME: "+nome+"\nALTURA: "+altura+"cm\nLARGURA: "+largura+"cm\nCOMPRIMENTO: "+comprimento+"cm";
+    }
+
     
 }

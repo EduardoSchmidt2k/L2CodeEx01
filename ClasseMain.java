@@ -1,5 +1,7 @@
 package l2codeex01;
 
+import java.util.Scanner;
+
 /**
 Dados de entrada do algoritmo sao os seguintes (altura x largura x comprimento):
 40 10 25
@@ -28,10 +30,13 @@ entrada, com diferentes quantidades de caixas, exemplo:
 
  * 
  */
-public class L2CodeExercicios {
+public class ClasseMain {
     
     public static void main(String[] args) {
         
+        Scanner entrada = new Scanner(System.in);
+        int auxiliarCaixa = 0;
+        /*
         Produto ps5 = new Produto("PlayStation5", 40, 10, 25);
         Produto volante = new Produto("Volante", 40, 30, 30);
         Produto joystick = new Produto("Joystick", 15, 20, 10);
@@ -43,8 +48,33 @@ public class L2CodeExercicios {
         System.out.println(joystick.calcularCaixaApropriada());
         System.out.println(fifa.calcularCaixaApropriada());
         System.out.println(callOfDuty.calcularCaixaApropriada());
-        
         System.out.println();
+        */
+        /*
+
+        Produto ps5 = new Produto(entrada.nextLine(), 
+        entrada.nextDouble(), entrada.nextDouble(), entrada.nextDouble());
+        
+
+       // Produto ps5 = new Produto();
+       // ps5.setNome("Otario");
+
+        System.out.println("\n"+ps5.imprimeProduto()+"\n"+ps5.calcularCaixaApropriada());
+        */
+        System.out.println("Escreva quantas caixas tens: ");
+        auxiliarCaixa = entrada.nextInt();
+
+        double[][] caixas = new double[auxiliarCaixa][3];
+
+        int auxiliar = 1; // Auxiliar para deixar o texto do terminal mais bonito!
+        for(int i = 0; i <caixas.length; i++){
+            System.out.println("Escreva as medidas da "+auxiliar+"° caixa (altura, largura, comprimento) :");
+            auxiliar++;
+            for (int j = 0; j < 3; j++) {
+                caixas[i][j] = entrada.nextDouble();
+            }
+
+        }
 
     }
     
