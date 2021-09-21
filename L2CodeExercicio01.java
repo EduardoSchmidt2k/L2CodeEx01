@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class L2CodeExercicio01 {
     public static void main(String[] args) {
         
         //CRIAÇÃO DE VÁRIAVEIS
